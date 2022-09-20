@@ -2,10 +2,11 @@ import React from 'react';
 import Education from './Education';
 import Experience from './Experience';
 import Personal from './Personal';
+import styled from "styled-components";
 
 function CvForm() {
   return (
-    <form>
+    <Wrapper>
       <Personal />
       <br />
       <Education />
@@ -14,8 +15,10 @@ function CvForm() {
       <br />
       <button>Create CV</button>
       <br />
-    </form>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div``;
 
 export default CvForm;
