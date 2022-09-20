@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaBriefcase } from 'react-icons/fa';
 
-function Header() {
+const Header = () => {
   return (
     <HeaderStyled>
       <Logo>
@@ -16,9 +16,15 @@ function Header() {
 const HeaderStyled = styled.header`
   display: flex;
   font-size: 2rem;
+  justify-content: center;
 `;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  display: flex;
+  font-size: 4rem;
+  margin-right: 2rem;
+  font-size: 4rem;
+`;
 const Title = styled.h1``;
 
-export default Header
+export default Header;

@@ -30,6 +30,7 @@ header {
     font-size: 2.4rem;
     background-color: var(--color-dark);
     color: var(--color-yellow);
+    padding: 3rem 8rem;
 }
 
 h1 {
