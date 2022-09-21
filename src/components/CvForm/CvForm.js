@@ -24,6 +24,8 @@ const CvWrapper = styled.div`
   padding: 2rem;
   gap: 3rem;
   min-width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.95) 0px 5px 15px;
+  background-color: #565d69;
 `;
 
 export default CvForm;

@@ -14,7 +14,7 @@ const CvResult = () => {
 
 const CvResultWrap = styled.div`
   min-width: 700px;
-  padding: 2rem;
+  margin-top: 3rem;
 `;
 
 export default CvResult;
