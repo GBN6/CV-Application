@@ -22,7 +22,7 @@ const SidebarWrap = styled.div`
   padding: 1.5rem;
   background-color: rgb(221, 221, 221);
   color: #393e46;
-  flex: 1;
+  border-bottom-right-radius: 5px;
 `;
 
 const Photo = styled.img`

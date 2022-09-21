@@ -1,32 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../Utility/Section';
+import Subsection from '../Utility/Subsection';
 
 const ResultContent = () => {
   return (
     <ContentWrap>
-      <Description>Some description</Description>
+      <Description>Description</Description>
       <Section title='Experience'>
-        <Period>2012-10 - today</Period>
-        <Position>Data engineer</Position>
-        <Company>Some company</Company>
-        <Responsibilities>
-          <li>Responsibility 1</li>
-          <li>Responsibility 2</li>
-          <li>Responsibility 3</li>
-          <li>Responsibility 4</li>
-        </Responsibilities>
+        <Period>From - To</Period>
+        <Subsection title='Position'>
+          <p>Company, City</p>
+        </Subsection>
       </Section>
       <Section title='Education'>
-        <Period>2012-10 - today</Period>
-        <Position>Data engineer</Position>
-        <Company>Some company</Company>
-        <Responsibilities>
-          <li>Responsibility 1</li>
-          <li>Responsibility 2</li>
-          <li>Responsibility 3</li>
-          <li>Responsibility 4</li>
-        </Responsibilities>
+        <Period>From - To</Period>
+        <Subsection title='University name, City'>
+          <p>Degree: Degree</p>
+          <p>Subject: Subject</p>
+        </Subsection>
       </Section>
     </ContentWrap>
   );
@@ -38,18 +30,15 @@ const ContentWrap = styled.div`
   grid-column: span 9;
   padding: 2rem;
   background-color: rgb(238, 238, 238);
-  flex: 3;
   color: #222831;
+  min-height: 870px;
+  border-bottom-left-radius: 5px;
 `;
 
 const Description = styled.p`
   margin-bottom: 1rem;
 `;
 
-const Period = styled.div``;
-
-const Position = styled.div``;
-
-const Company = styled.div``;
-
-const Responsibilities = styled.ul``;
+const Period = styled.div`
+  width: 20%;
+`;

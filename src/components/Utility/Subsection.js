@@ -18,6 +18,7 @@ const SubsectionWrap = styled.section`
 
 const Title = styled.h3`
   padding: 0.5rem;
+  line-height: 1.6;
 `;
 
 export default Subsection;
