@@ -19,6 +19,7 @@ const MainWrapper = styled.main`
 
 const Button = styled.button`
   margin: 1rem;
+
 `;
 
 export default Main;
