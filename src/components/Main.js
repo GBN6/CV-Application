@@ -13,7 +13,11 @@ function Main() {
 }
 
 const MainWrapper = styled.main`
-  padding: 3rem;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 5rem;
+margin-bottom: 4rem;
 `;
 
 export default Main;

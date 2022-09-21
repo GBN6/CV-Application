@@ -10,7 +10,7 @@ const InputWrap = styled.input`
   border-radius: 5px;
   border: 1px solid transparent;
   &:focus {
-    border: 1px solid black;
+    border: 2px solid #222831;
   }
 `;
 

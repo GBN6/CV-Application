@@ -11,13 +11,13 @@ const Section = (props) => {
 };
 
 const SectionWrap = styled.section`
-  display: grid;
-  grid-gap: 0.5rem;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 `;
 
 const Title = styled.h2`
-padding: 0.5rem;
+  padding: 0.5rem;
 `;
 
 export default Section;

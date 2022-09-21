@@ -22,6 +22,8 @@ const CvWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   padding: 2rem;
+  gap: 3rem;
+  min-width: 700px;
 `;
 
 export default CvForm;
