@@ -4,7 +4,7 @@ import Section from '../Utility/Section';
 import Subsection from '../Utility/Subsection';
 import photo from '../../assets/photo.png';
 
-const Sidebar = () => {
+const ResultSidebar = () => {
   return (
     <SidebarWrap>
       <Photo src={photo} alt='example' />
@@ -18,6 +18,7 @@ const Sidebar = () => {
 };
 
 const SidebarWrap = styled.div`
+  grid-column: span 1;
   padding: 1.5rem;
   background-color: rgb(221, 221, 221);
   color: #393e46;
@@ -30,4 +31,4 @@ const Photo = styled.img`
   max-width: 200px
 `;
 
-export default Sidebar;
+export default ResultSidebar;
