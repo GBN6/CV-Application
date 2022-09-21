@@ -8,18 +8,12 @@ function Main() {
     <MainWrapper>
       <CvForm />
       <CvResult />
-      <Button>Generate CV in PDF</Button>
     </MainWrapper>
   );
 }
 
 const MainWrapper = styled.main`
-  padding: 2rem;
-`;
-
-const Button = styled.button`
-  margin: 1rem;
-
+  padding: 3rem;
 `;
 
 export default Main;
