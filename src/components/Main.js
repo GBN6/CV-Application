@@ -18,6 +18,11 @@ align-items: center;
 justify-content: center;
 padding: 5rem;
 margin-bottom: 4rem;
+
+@media (max-width: 1200px) {
+  flex-direction: column;
+}
+
 `;
 
 export default Main;
