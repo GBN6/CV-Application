@@ -31,6 +31,7 @@ header {
     background-color: var(--color-dark);
     color: var(--color-yellow);
     padding: 3rem 8rem;
+    align-items: center;
 }
 
 h1 {
@@ -49,4 +50,9 @@ button {
     background-color: var(--color-dark);
     color: var(--color-yellow);
     cursor: pointer;
+}
+
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
 }

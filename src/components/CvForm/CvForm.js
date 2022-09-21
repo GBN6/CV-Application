@@ -4,21 +4,19 @@ import Experience from './Experience';
 import Personal from './Personal';
 import styled from "styled-components";
 
-function CvForm() {
+const CvForm = () => {
   return (
-    <Wrapper>
+    <CvWrapper>
       <Personal />
-      <br />
       <Education />
-      <br />
       <Experience />
-      <br />
-      <button>Create CV</button>
-      <br />
-    </Wrapper>
+    </CvWrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const CvWrapper = styled.div`
+  max-width: 800px;
+  border-radius: 5px;
+`;
 
 export default CvForm;

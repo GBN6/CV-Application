@@ -22,7 +22,7 @@ const HeaderStyled = styled.header`
 const Logo = styled.div`
   display: flex;
   font-size: 4rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   font-size: 4rem;
 `;
 const Title = styled.h1``;
