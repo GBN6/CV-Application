@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ResultHeader = () => {
+const ResultHeader = ({ personalInfo }) => {
   return (
     <CvResultHeaderWrap>
-      <h1>Jan Nowak</h1>
-      <p>Web Developer</p>
+      <h1>
+        {personalInfo.firstName} {personalInfo.lastName}
+      </h1>
+      <p>{personalInfo.titleName}</p>
     </CvResultHeaderWrap>
   );
 };
@@ -13,7 +15,7 @@ const ResultHeader = () => {
 const CvResultHeaderWrap = styled.header`
   grid-column: span 2;
   padding: 2rem;
-  background-color: #FFD369;
+  background-color: #ffd369;
   color: #222831;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;

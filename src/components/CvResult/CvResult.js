@@ -4,12 +4,16 @@ import ResultHeader from './ResultHeader';
 import ResultContent from './ResultContent';
 import ResultSidebar from './ResultSidebar';
 
-const CvResult = () => {
+const CvResult = ({ cv }) => {
   return (
     <CvResultWrap>
-      <ResultHeader />
-      <ResultContent />
-      <ResultSidebar />
+      <ResultHeader personalInfo={cv.personalInfo} />
+      <ResultContent
+        personalInfo={cv.personalInfo}
+        experience={cv.experience}
+        education={cv.education}
+      />
+      <ResultSidebar personalInfo={cv.personalInfo} />
     </CvResultWrap>
   );
 };

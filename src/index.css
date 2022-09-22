@@ -51,7 +51,6 @@ input,
 textarea {
     border: none;
     outline: none;
-    color: inherit;
     font-family: inherit;
     font-size: inherit;
 }

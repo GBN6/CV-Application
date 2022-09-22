@@ -3,21 +3,21 @@ import styled from 'styled-components';
 import Section from '../Utility/Section';
 import Subsection from '../Utility/Subsection';
 
-const ResultContent = () => {
+const ResultContent = ({personalInfo, experience, education}) => {
   return (
     <ContentWrap>
-      <Description>Description</Description>
+      <Description>{personalInfo.description}</Description>
       <Section title='Experience'>
-        <Period>From - To</Period>
-        <Subsection title='Position'>
-          <p>Company, City</p>
+        <Period>{experience.from} - {experience.to} </Period>
+        <Subsection title={experience.position}>
+          <p>{experience.position} {experience.city} </p>
         </Subsection>
       </Section>
       <Section title='Education'>
-        <Period>From - To</Period>
-        <Subsection title='University name, City'>
-          <p>Degree: ...</p>
-          <p>Subject: ...</p>
+        <Period>{education.from} - {education.to} </Period>
+        <Subsection title={`${education.universityName}, ${education.city}`}>
+          <p>Degree: {education.degree}</p>
+          <p>Subject: {education.specialization}</p>
         </Subsection>
       </Section>
     </ContentWrap>

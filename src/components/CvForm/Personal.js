@@ -9,7 +9,7 @@ const Personal = () => {
       <Input type='text' name='' placeholder='First name' />
       <Input type='text' name='' placeholder='Last name' />
       <Input type='text' name='' placeholder='Title' />
-      <Input type='text' name='' placeholder='Photo' />
+      <Input type='file' name='' placeholder='Photo' aria-label="photo" />
       <Input type='text' name='' placeholder='Email' />
       <Input type='text' name='' placeholder='Phone number' />
       <Input type="text" name="" placeholder="Address" />
