@@ -14,15 +14,17 @@ function Main() {
 
 const MainWrapper = styled.main`
 display: flex;
-align-items: center;
+align-items: flex-start;
 justify-content: center;
 padding: 5rem;
 margin-bottom: 4rem;
+gap: 6rem;
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
-
 `;
 
 export default Main;

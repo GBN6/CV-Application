@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../Utility/Section';
 import Input from '../Utility/Input';
+import TextArea from '../Utility/TextArea';
 
 const Personal = () => {
   return (
@@ -11,6 +12,9 @@ const Personal = () => {
       <Input type='text' name='' placeholder='Photo' />
       <Input type='text' name='' placeholder='Email' />
       <Input type='text' name='' placeholder='Phone number' />
+      <Input type="text" name="" placeholder="Address" />
+      <Input type="text" name="" placeholder="Skills" />
+      <TextArea name="" placeholder="Description" />
     </Section>
   );
 }

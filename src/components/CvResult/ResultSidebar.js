@@ -8,7 +8,7 @@ const ResultSidebar = () => {
   return (
     <SidebarWrap>
       <Photo src={photo} alt='example' />
-      <Section title='Personal Info'>
+      <Section title='Personal Details'>
         <Subsection title='Address'>Example street 20</Subsection>
         <Subsection title='Phone Number'>123456789</Subsection>
         <Subsection title='Email'>mail@gmail.com</Subsection>
@@ -18,7 +18,6 @@ const ResultSidebar = () => {
 };
 
 const SidebarWrap = styled.div`
-  grid-column: span 1;
   padding: 1.5rem;
   background-color: rgb(221, 221, 221);
   color: #393e46;
@@ -28,7 +27,7 @@ const SidebarWrap = styled.div`
 const Photo = styled.img`
   margin-bottom: 2rem;
   max-height: 300px;
-  max-width: 200px
+  max-width: 170px
 `;
 
 export default ResultSidebar;

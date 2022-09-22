@@ -15,8 +15,11 @@ const CvResult = () => {
 };
 
 const CvResultWrap = styled.div`
+  width: 210mm;
+  height: 297mm;
   display: grid;
-  min-width: 700px;
+  grid-template-columns: 150mm 60mm;
+  grid-template-rows: 35mm 262mm;
   margin-top: 3rem;
   box-shadow: rgba(0, 0, 0, 0.95) 0px 5px 15px;
   border-bottom-right-radius: 5px;

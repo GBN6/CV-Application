@@ -16,8 +16,8 @@ const ResultContent = () => {
       <Section title='Education'>
         <Period>From - To</Period>
         <Subsection title='University name, City'>
-          <p>Degree: Degree</p>
-          <p>Subject: Subject</p>
+          <p>Degree: ...</p>
+          <p>Subject: ...</p>
         </Subsection>
       </Section>
     </ContentWrap>
@@ -27,11 +27,9 @@ const ResultContent = () => {
 export default ResultContent;
 
 const ContentWrap = styled.div`
-  grid-column: span 9;
   padding: 2rem;
   background-color: rgb(238, 238, 238);
   color: #222831;
-  min-height: 870px;
   border-bottom-left-radius: 5px;
 `;
 
@@ -41,4 +39,6 @@ const Description = styled.p`
 
 const Period = styled.div`
   width: 20%;
+  font-weight: bold;
+  padding: 0.5rem;
 `;
