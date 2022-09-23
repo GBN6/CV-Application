@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ResultHeader = ({ personalInfo }) => {
+  const { firstName, lastName, titleName } = personalInfo;
   return (
     <CvResultHeaderWrap>
       <h1>
-        {personalInfo.firstName} {personalInfo.lastName}
+        {firstName} {lastName}
       </h1>
-      <p>{personalInfo.titleName}</p>
+      <p>{titleName}</p>
     </CvResultHeaderWrap>
   );
 };

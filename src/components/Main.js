@@ -38,13 +38,46 @@ function Main() {
     },
   });
 
-  const handleInput = (e) => {
-    console.log(e.value);
+  const handleChangePersonal = (e) => {
+    const { name, value } = e.target;
+    setCv((prevState) => ({
+      ...prevState,
+      personalInfo: {
+        ...prevState.personalInfo,
+        [name]: value,
+      },
+    }));
+  };
+
+  const handleChangeExperience = (e) => {
+    const { name, value } = e.target;
+    setCv((prevState) => ({
+      ...prevState,
+      experience: {
+        ...prevState.experience,
+        [name]: value,
+      },
+    }));
+  };
+
+  const handleChangeEducation = (e) => {
+    const { name, value } = e.target;
+    setCv((prevState) => ({
+      ...prevState,
+      education: {
+        ...prevState.education,
+        [name]: value,
+      },
+    }));
   };
 
   return (
     <MainWrapper>
-      <CvForm onChange={handleInput} />
+      <CvForm
+        onChangePersonal={handleChangePersonal}
+        onChangeExperience={handleChangeExperience}
+        onChangeEducation={handleChangeEducation}
+      />
       <CvResult cv={cv} />
     </MainWrapper>
   );

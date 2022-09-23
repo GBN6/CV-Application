@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextArea = ({ type, name, placeholder }) => {
-  return <TextAreaWrap name={name} placeholder={placeholder} />;
+const TextArea = ({ onChange, name, placeholder }) => {
+  return (
+    <TextAreaWrap onChange={onChange} name={name} placeholder={placeholder} />
+  );
 };
 
 const TextAreaWrap = styled.textarea`

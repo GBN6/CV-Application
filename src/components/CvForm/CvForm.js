@@ -5,12 +5,16 @@ import Personal from './Personal';
 import styled from 'styled-components';
 import Button from '../Utility/Button';
 
-const CvForm = () => {
+const CvForm = ({
+  onChangePersonal,
+  onChangeEducation,
+  onChangeExperience,
+}) => {
   return (
     <CvWrapper>
-      <Personal />
-      <Experience />
-      <Education />
+      <Personal onChange={onChangePersonal} />
+      <Experience onChange={onChangeExperience} />
+      <Education onChange={onChangeEducation} />
       <Button text='Generate CV in PDF'></Button>
     </CvWrapper>
   );
