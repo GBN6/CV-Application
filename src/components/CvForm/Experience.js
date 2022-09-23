@@ -3,46 +3,22 @@ import Section from '../Utility/Section';
 import Input from '../Utility/Input';
 import TextArea from '../Utility/TextArea';
 import Button from '../Utility/Button';
+import ExperienceItem from './ExperienceItem';
 
-function Experience({ onChange }) {
+function Experience({ experience, onChange, onAdd, onDelete }) {
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItem
+      key={experienceItem.id}
+      experienceItem={experienceItem}
+      onChange={onChange}
+      onDelete={onDelete}
+    />
+  ));
+
   return (
     <Section title='Experience'>
-      <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='position'
-        placeholder='Position'
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='company'
-        placeholder='Company'
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='city'
-        placeholder='City'
-      />
-      <TextArea
-        onChange={(e) => onChange(e)}
-        name='description'
-        placeholder='Description'
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='from'
-        placeholder='From'
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='to'
-        placeholder='To'
-      />
-      <Button text="Add"></Button>
+      {experienceItems}
+      <Button text="Add" onClick={onAdd}></Button>
     </Section>
   );
 }

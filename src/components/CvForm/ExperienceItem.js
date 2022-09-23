@@ -1,57 +1,55 @@
 import React from 'react';
-import Section from '../Utility/Section';
 import Input from '../Utility/Input';
 import Button from '../Utility/Button';
+import TextArea from '../Utility/TextArea';
 
-const Education = ({ education, onChange, onAdd, onDelete }) => {
+const ExperienceItems = ({ experienceItem, onChange, onDelete }) => {
   return (
-    <Section title='Education'>
+    <>
       <Input
         onChange={(e) => onChange(e)}
         type='text'
-        name='universityName'
-        placeholder='School name'
-        value={education.universityName}
+        name='position'
+        placeholder='Position'
+        value={experienceItem.position}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type='text'
+        name='company'
+        placeholder='Company'
+        value={experienceItem.company}
       />
       <Input
         onChange={(e) => onChange(e)}
         type='text'
         name='city'
         placeholder='City'
-        value={education.city}
+        value={experienceItem.city}
       />
-      <Input
+      <TextArea
         onChange={(e) => onChange(e)}
-        type='text'
-        name='degree'
-        placeholder='Degree'
-        value={education.degree}
-      />
-      <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='specialization'
-        placeholder='Specialization'
-        value={education.specialization}
+        name='description'
+        placeholder='Description'
+        value={experienceItem.description}
       />
       <Input
         onChange={(e) => onChange(e)}
         type='text'
         name='from'
         placeholder='From'
-        value={education.from}
+        value={experienceItem.from}
       />
       <Input
         onChange={(e) => onChange(e)}
         type='text'
         name='to'
         placeholder='To'
-        value={education.to}
+        value={experienceItem.to}
       />
       <Button text='Delete' onClick={onDelete}></Button>
-      <Button text='Add' onClick={onAdd}></Button>
-    </Section>
+    </>
   );
 };
 
-export default Education;
+export default ExperienceItems;

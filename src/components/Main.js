@@ -3,6 +3,8 @@ import CvForm from './CvForm/CvForm';
 import CvResult from './CvResult';
 import styled from 'styled-components';
 import exampleCV from './Utility/exampleCv';
+import emptyCv from './Utility/emptyCv';
+import { v4 as uuidv4 } from "uuid";
 
 const Main = () => {
   const [cv, setCv] = useState(exampleCV);
@@ -65,12 +67,53 @@ const Main = () => {
     }));
   };
 
+  const handleAddExperience = (e) => {
+    setCv((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: uuidv4(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+  const handleDeleteExperience = (e) => {};
+  const handleAddEducation = (e) => {
+    setCv((prevState) => ({
+      ...prevState,
+      education: [
+        ...prevState.education,
+        {
+          id: uuidv4(),
+          universityName: "",
+          city: "",
+          degree: "",
+          subject: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+  const handleDeleteEducation = (e) => {};
+
   return (
     <MainWrapper>
       <CvForm
+        cv={cv}
         onChangePersonal={handleChangePersonal}
         onChangeExperience={handleChangeExperience}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
         onChangeEducation={handleChangeEducation}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
       />
       <CvResult cv={cv} />
     </MainWrapper>

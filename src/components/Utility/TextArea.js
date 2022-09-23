@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextArea = ({ onChange, name, placeholder }) => {
+const TextArea = ({ onChange, name, placeholder, value }) => {
   return (
-    <TextAreaWrap onChange={onChange} name={name} placeholder={placeholder} />
+    <TextAreaWrap
+      onChange={onChange}
+      name={name}
+      placeholder={placeholder}
+      value={value}
+    />
   );
 };
 

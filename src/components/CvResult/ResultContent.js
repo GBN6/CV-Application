@@ -2,36 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../Utility/Section';
 import Subsection from '../Utility/Subsection';
+import ExperienceItem from './ExperienceItem';
+import EducationItem from './EducationItem';
 
 const ResultContent = ({ personalInfo, experience, education }) => {
+  const experienceItems = experience.map((experienceItem) => (
+    <ExperienceItem key={experienceItem.id} experienceItem={experienceItem} />
+  ));
+
+  const educationItems = education.map((educationItem) => (
+    <EducationItem key={educationItem.id} educationItem={educationItem} />
+  ));
+
   return (
     <ContentWrap>
       <Description>{personalInfo.description}</Description>
       <Section title='Experience'>
-        <Period>
-          {experience.from} - {experience.to}
-        </Period>
-        <Subsection title={experience.position}>
-          <p>{experience.description}</p>
-          <p>
-            {experience.company} {experience.city}
-          </p>
-        </Subsection>
+        {experienceItems}
       </Section>
       <Section title='Education'>
-        <Period>
-          {education.from} - {education.to}
-        </Period>
-        <Subsection title={`${education.universityName}, ${education.city}`}>
-          <p>Degree: {education.degree}</p>
-          <p>Subject: {education.specialization}</p>
-        </Subsection>
+        {educationItems}
       </Section>
     </ContentWrap>
   );
 };
-
-export default ResultContent;
 
 const ContentWrap = styled.div`
   padding: 2rem;
@@ -44,8 +38,4 @@ const Description = styled.p`
   margin-bottom: 1rem;
 `;
 
-const Period = styled.div`
-  width: 20%;
-  font-weight: bold;
-  padding: 0.5rem;
-`;
+export default ResultContent;
