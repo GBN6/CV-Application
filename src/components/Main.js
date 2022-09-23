@@ -2,41 +2,10 @@ import React, { useState } from 'react';
 import CvForm from './CvForm/CvForm';
 import CvResult from './CvResult';
 import styled from 'styled-components';
-import exapmlePhoto from '../assets/photo.png';
+import exampleCV from './Utility/exampleCv';
 
-function Main() {
-  const [cv, setCv] = useState({
-    personalInfo: {
-      firstName: 'John',
-      lastName: 'Doe',
-      titleName: 'Web Developer',
-      photo: exapmlePhoto,
-      address: 'Street 30 / 4',
-      phoneNumber: '123456789',
-      email: 'mail@gmail.com',
-      skill: {
-        text: '',
-      },
-      skills: [],
-      description: 'Description',
-    },
-    experience: {
-      position: 'Position',
-      company: 'Company',
-      city: 'City',
-      description: 'Description',
-      from: 'From',
-      to: 'To',
-    },
-    education: {
-      universityName: 'University name',
-      city: 'City',
-      degree: '...',
-      specialization: '...',
-      from: 'From',
-      to: 'To',
-    },
-  });
+const Main = () => {
+  const [cv, setCv] = useState(exampleCV);
 
   const handleChangePersonal = (e) => {
     const { name, value } = e.target;
