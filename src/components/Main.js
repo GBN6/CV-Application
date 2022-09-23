@@ -8,7 +8,13 @@ const Main = () => {
   const [cv, setCv] = useState(exampleCV);
 
   const handleChangePersonal = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+
+    if (type === 'file') {
+      handleChangePhoto(e);
+      return;
+    }
+
     setCv((prevState) => ({
       ...prevState,
       personalInfo: {
@@ -16,6 +22,25 @@ const Main = () => {
         [name]: value,
       },
     }));
+  };
+
+  const handleChangePhoto = (e) => {
+    const { name } = e.target;
+    const photo = e.target.files[0];
+    if (!photo) return;
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      setCv((prevState) => ({
+        ...prevState,
+        personalInfo: {
+          ...prevState.personalInfo,
+          [name]: reader.result,
+        },
+      }));
+    };
+    reader.readAsDataURL(photo);
   };
 
   const handleChangeExperience = (e) => {
@@ -50,7 +75,7 @@ const Main = () => {
       <CvResult cv={cv} />
     </MainWrapper>
   );
-}
+};
 
 const MainWrapper = styled.main`
   display: flex;

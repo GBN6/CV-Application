@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '../Utility/Section';
 import Input from '../Utility/Input';
 import TextArea from '../Utility/TextArea';
+import Button from '../Utility/Button';
 
 function Experience({ onChange }) {
   return (
@@ -41,6 +42,7 @@ function Experience({ onChange }) {
         name='to'
         placeholder='To'
       />
+      <Button text="Add"></Button>
     </Section>
   );
 }
