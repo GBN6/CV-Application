@@ -14,6 +14,7 @@ const SubsectionWrap = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  justify-content: flex-start;
 `;
 
 const Title = styled.h3`

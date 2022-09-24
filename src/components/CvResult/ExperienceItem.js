@@ -24,6 +24,7 @@ display: flex;
 const Period = styled.div`
   width: 20%;
   font-weight: bold;
+  padding: 0.5rem;
 `;
 
 export default ExperienceItem;

@@ -45,26 +45,30 @@ const Main = () => {
     reader.readAsDataURL(photo);
   };
 
-  const handleChangeExperience = (e) => {
+  const handleChangeExperience = (e, id) => {
     const { name, value } = e.target;
-    setCv((prevState) => ({
-      ...prevState,
-      experience: {
-        ...prevState.experience,
-        [name]: value,
-      },
-    }));
+    setCv((prevState) => {
+      const newExperience = prevState.experience.map((experienceItem) => {
+        if (experienceItem.id === id) {
+          return { ...experienceItem, [name]: value }
+        }
+        return experienceItem
+      })
+      return { ...prevState, experience: [...newExperience] }
+    })
   };
 
-  const handleChangeEducation = (e) => {
+  const handleChangeEducation = (e, id) => {
     const { name, value } = e.target;
-    setCv((prevState) => ({
-      ...prevState,
-      education: {
-        ...prevState.education,
-        [name]: value,
-      },
-    }));
+    setCv((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value }
+        }
+        return educationItem
+      })
+      return { ...prevState, education: [...newEducation] }
+    })
   };
 
   const handleAddExperience = (e) => {

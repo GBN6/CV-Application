@@ -24,22 +24,6 @@ const exampleCV = {
     from: 'From',
     to: 'To',
     },
-    {
-      id: uuidv4(),
-      position: "Position",
-      company: "Company",
-      city: "City",
-      from: "From",
-      to: "To",
-    },
-    {
-      id: uuidv4(),
-      position: "Position",
-      company: "Company",
-      city: "City",
-      from: "From",
-      to: "To",
-    },
   ],
   education: [
     {
@@ -50,24 +34,6 @@ const exampleCV = {
     specialization: '...',
     from: 'From',
     to: 'To',
-    },
-    {
-      id: uuidv4(),
-      universityName: "University name",
-      city: "City",
-      degree: "...",
-      subject: "...",
-      from: "From",
-      to: "To",
-    },
-    {
-      id: uuidv4(),
-      universityName: "University name",
-      city: "City",
-      degree: "...",
-      subject: "...",
-      from: "From",
-      to: "To",
     },
   ],
 };
