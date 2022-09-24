@@ -15,13 +15,11 @@ const ResultContent = ({ personalInfo, experience, education }) => {
 
   return (
     <ContentWrap>
-      <Description>{personalInfo.description}</Description>
-      <Section title='Experience'>
-        {experienceItems}
+      <Section title='Description' contrastTitle>
+        {personalInfo.description}
       </Section>
-      <Section title='Education'>
-        {educationItems}
-      </Section>
+      <Section title='Experience'>{experienceItems}</Section>
+      <Section title='Education'>{educationItems}</Section>
     </ContentWrap>
   );
 };
@@ -31,10 +29,6 @@ const ContentWrap = styled.div`
   background-color: rgb(238, 238, 238);
   color: #222831;
   border-bottom-left-radius: 5px;
-`;
-
-const Description = styled.p`
-  margin-bottom: 1rem;
 `;
 
 export default ResultContent;
