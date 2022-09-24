@@ -9,11 +9,11 @@ const CvForm = ({
   cv,
   onChangePersonal,
   onChangeExperience,
-  handleAddExperience,
-  handleDeleteExperience,
+  onAddExperience,
+  onDeleteExperience,
   onChangeEducation,
-  handleAddEducation,
-  handleDeleteEducation,
+  onAddEducation,
+  onDeleteEducation,
 }) => {
   return (
     <CvWrapper>
@@ -21,14 +21,14 @@ const CvForm = ({
       <Experience
         experience={cv.experience}
         onChange={onChangeExperience}
-        onAdd={handleAddExperience}
-        onDelete={handleDeleteExperience}
+        onAdd={onAddExperience}
+        onDelete={onDeleteExperience}
       />
       <Education
         education={cv.education}
         onChange={onChangeEducation}
-        onAdd={handleAddEducation}
-        onDelete={handleDeleteEducation}
+        onAdd={onAddEducation}
+        onDelete={onDeleteEducation}
       />
       <Button text='Generate CV in PDF' primary></Button>
     </CvWrapper>

@@ -3,7 +3,7 @@ import CvForm from './CvForm/CvForm';
 import CvResult from './CvResult';
 import styled from 'styled-components';
 import exampleCV from './Utility/exampleCv';
-import emptyCv from './Utility/emptyCv';
+// import emptyCv from './Utility/emptyCv';
 import { v4 as uuidv4 } from "uuid";
 
 const Main = () => {
@@ -83,7 +83,9 @@ const Main = () => {
       ],
     }));
   };
-  const handleDeleteExperience = (e) => {};
+  const handleDeleteExperience = (id) => {
+    console.log(id)
+  };
   const handleAddEducation = (e) => {
     setCv((prevState) => ({
       ...prevState,

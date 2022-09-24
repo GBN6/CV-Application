@@ -7,7 +7,6 @@ import FileInput from '../Utility/FileInput';
 const Personal = ({ personalInfo, onChange }) => {
   return (
     <Section title='Personal Information'>
-      {personalInfo.firstName}
       <Input
         onChange={(e) => onChange(e)}
         type='text'
