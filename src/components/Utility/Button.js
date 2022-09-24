@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const Button = ({ text, onClick, primary }) => {
-  return <ButtonWrap primary={primary} onClick={onClick}>{text}</ButtonWrap>;
+const Button = ({ text, onClick, primary, secondary }) => {
+  return <ButtonWrap primary={primary} secondary={secondary} onClick={onClick}>{text}</ButtonWrap>;
 };
 const ButtonWrap = styled.button`
   padding: 1rem;
@@ -26,6 +26,18 @@ const ButtonWrap = styled.button`
         background-color: #098026;
       }
     `}
+    ${(props) =>
+      props.secondary &&
+      css`
+        background-color: #c25c0e};
+        color: #EEEEEE;
+        &:hover {
+          background-color: #b14b0d;
+        }
+        &:active {
+          background-color: #a03a0c;
+        }
+      `}
 `;
 
 export default Button;

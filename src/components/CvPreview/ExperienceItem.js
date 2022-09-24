@@ -8,11 +8,13 @@ const ExperienceItem = ({ experienceItem }) => {
       <Period>
         {experienceItem.from} - {experienceItem.to}
       </Period>
-      <Subsection title={experienceItem.position}>
-        <p>
-          {experienceItem.company}, {experienceItem.city}
-        </p>
-      </Subsection>
+      <Info>
+        <Subsection title={experienceItem.position}>
+          <p>
+            {experienceItem.company}, {experienceItem.city}
+          </p>
+        </Subsection>
+      </Info>
     </ExperienceItemWrap>
   );
 };
@@ -26,5 +28,9 @@ const Period = styled.div`
   font-weight: bold;
   padding: 0.5rem;
 `;
+
+const Info = styled.div`
+width: 75%;
+`
 
 export default ExperienceItem;

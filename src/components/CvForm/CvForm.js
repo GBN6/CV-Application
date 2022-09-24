@@ -15,6 +15,7 @@ const CvForm = ({
   onAddEducation,
   onDeleteEducation,
   onPrint,
+  onLoadExample,
 }) => {
   return (
     <CvWrapper>
@@ -32,6 +33,7 @@ const CvForm = ({
         onDelete={onDeleteEducation}
       />
       <Button text='Generate CV in PDF' onClick={onPrint} primary></Button>
+      <Button text="Load Example" onClick={onLoadExample} secondary></Button>
     </CvWrapper>
   );
 };
@@ -42,7 +44,7 @@ const CvWrapper = styled.div`
   justify-content: center;
   border-radius: 5px;
   padding: 2rem;
-  gap: 3rem;
+  gap: 2rem;
   width: 210mm;
   box-shadow: rgba(0, 0, 0, 0.95) 0px 5px 15px;
   background-color: #565d69;

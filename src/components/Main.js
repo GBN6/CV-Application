@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import exampleCV from './Utility/exampleCv';
 import emptyCv from './Utility/emptyCv';
 import { v4 as uuidv4 } from 'uuid';
-import { useReactToPrint } from "react-to-print";
+import { useReactToPrint } from 'react-to-print';
 
 const Main = () => {
-  const [cv, setCv] = useState(exampleCV);
+  const [cv, setCv] = useState(emptyCv);
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
@@ -135,6 +135,10 @@ const Main = () => {
   //   })
   // }
 
+  const handleLoadExample = () => {
+    setCv(exampleCV);
+  };
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
@@ -150,6 +154,7 @@ const Main = () => {
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
+        onLoadExample={handleLoadExample}
       />
       <CvPreview cv={cv} ref={componentRef} />
     </MainWrapper>

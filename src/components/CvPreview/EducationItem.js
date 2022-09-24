@@ -8,12 +8,14 @@ const EducationItem = ({ educationItem }) => {
       <Period>
         {educationItem.from} - {educationItem.to}
       </Period>
-      <Subsection
-        title={`${educationItem.universityName}, ${educationItem.city}`}
-      >
-        <p>Degree: {educationItem.degree}</p>
-        <p>Subject: {educationItem.specialization}</p>
-      </Subsection>
+      <Info>
+        <Subsection
+          title={`${educationItem.universityName}, ${educationItem.city}`}
+        >
+          <p>Degree: {educationItem.degree}</p>
+          <p>Subject: {educationItem.specialization}</p>
+        </Subsection>
+      </Info>
     </EducationItemWrap>
   );
 };
@@ -25,6 +27,10 @@ const Period = styled.div`
   width: 20%;
   font-weight: bold;
   padding: 0.5rem;
+`;
+
+const Info = styled.div`
+  width: 75%;
 `;
 
 export default EducationItem;
