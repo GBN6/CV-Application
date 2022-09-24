@@ -4,7 +4,7 @@ import CvResult from './CvResult';
 import styled from 'styled-components';
 import exampleCV from './Utility/exampleCv';
 // import emptyCv from './Utility/emptyCv';
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 const Main = () => {
   const [cv, setCv] = useState(exampleCV);
@@ -50,25 +50,12 @@ const Main = () => {
     setCv((prevState) => {
       const newExperience = prevState.experience.map((experienceItem) => {
         if (experienceItem.id === id) {
-          return { ...experienceItem, [name]: value }
+          return { ...experienceItem, [name]: value };
         }
-        return experienceItem
-      })
-      return { ...prevState, experience: [...newExperience] }
-    })
-  };
-
-  const handleChangeEducation = (e, id) => {
-    const { name, value } = e.target;
-    setCv((prevState) => {
-      const newEducation = prevState.education.map((educationItem) => {
-        if (educationItem.id === id) {
-          return { ...educationItem, [name]: value }
-        }
-        return educationItem
-      })
-      return { ...prevState, education: [...newEducation] }
-    })
+        return experienceItem;
+      });
+      return { ...prevState, experience: [...newExperience] };
+    });
   };
 
   const handleAddExperience = (e) => {
@@ -78,18 +65,38 @@ const Main = () => {
         ...prevState.experience,
         {
           id: uuidv4(),
-          position: "",
-          company: "",
-          city: "",
-          from: "",
-          to: "",
+          position: '',
+          company: '',
+          city: '',
+          from: '',
+          to: '',
         },
       ],
     }));
   };
+
   const handleDeleteExperience = (id) => {
-    console.log(id)
+    setCv((prevState) => {
+      const newExperience = prevState.experience.filter(
+        (experienceItem) => experienceItem.id !== id
+      );
+      return { ...prevState, experience: [...newExperience] };
+    });
   };
+
+  const handleChangeEducation = (e, id) => {
+    const { name, value } = e.target;
+    setCv((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value };
+        }
+        return educationItem;
+      });
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
+
   const handleAddEducation = (e) => {
     setCv((prevState) => ({
       ...prevState,
@@ -97,17 +104,24 @@ const Main = () => {
         ...prevState.education,
         {
           id: uuidv4(),
-          universityName: "",
-          city: "",
-          degree: "",
-          subject: "",
-          from: "",
-          to: "",
+          universityName: '',
+          city: '',
+          degree: '',
+          subject: '',
+          from: '',
+          to: '',
         },
       ],
     }));
   };
-  const handleDeleteEducation = (e) => {};
+  const handleDeleteEducation = (id) => {
+    setCv((prevState) => {
+      const newEducation = prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      );
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
 
   return (
     <MainWrapper>

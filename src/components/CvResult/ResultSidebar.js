@@ -6,7 +6,7 @@ import Subsection from '../Utility/Subsection';
 const ResultSidebar = ({ personalInfo }) => {
   return (
     <SidebarWrap>
-      <Photo src={personalInfo.photo} alt='example' />
+      <Photo src={personalInfo.photo}/>
       <Section title='Personal Details'>
         <Subsection title='Address'>{personalInfo.address}</Subsection>
         <Subsection title='Phone Number'>{personalInfo.phoneNumber}</Subsection>

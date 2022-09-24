@@ -19,6 +19,8 @@ const CvResult = ({ cv }) => {
 };
 
 const CvResultWrap = styled.div`
+  position: sticky;
+  top: 10px;
   width: 210mm;
   height: 297mm;
   display: grid;
