@@ -3,18 +3,28 @@ import styled from 'styled-components';
 import ResultHeader from './ResultHeader';
 import ResultContent from './ResultContent';
 import ResultSidebar from './ResultSidebar';
+import Button from '../Utility/Button';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 const CvResult = ({ cv }) => {
   return (
-    <CvResultWrap>
-      <ResultHeader personalInfo={cv.personalInfo} />
-      <ResultContent
-        personalInfo={cv.personalInfo}
-        experience={cv.experience}
-        education={cv.education}
-      />
-      <ResultSidebar personalInfo={cv.personalInfo} />
-    </CvResultWrap>
+    <>
+      <CvResultWrap>
+        <ResultHeader personalInfo={cv.personalInfo} />
+        <ResultContent
+          personalInfo={cv.personalInfo}
+          experience={cv.experience}
+          education={cv.education}
+        />
+        <ResultSidebar personalInfo={cv.personalInfo} />
+      </CvResultWrap>
+      <Pdf targetRef={ref} filename='cv.pdf'>
+        {({ toPdf }) => <Button text='Generate PDF' onClick={toPdf} />}
+      </Pdf>
+      <div style={{ width: 500, height: 500, background: 'blue' }} ref={ref} />
+    </>
   );
 };
 
