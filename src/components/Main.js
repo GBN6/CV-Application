@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import CvForm from './CvForm/CvForm';
-import CvResult from './CvResult';
+import CvPreview from './CvPreview';
 import styled from 'styled-components';
 import exampleCV from './Utility/exampleCv';
 import emptyCv from './Utility/emptyCv';
 import { v4 as uuidv4 } from 'uuid';
+import { useReactToPrint } from "react-to-print";
 
 const Main = () => {
-  const [cv, setCv] = useState(emptyCv);
+  const [cv, setCv] = useState(exampleCV);
 
   const handleChangePersonal = (e) => {
     const { name, value, type } = e.target;
@@ -123,6 +124,20 @@ const Main = () => {
     });
   };
 
+  // const handlePrint = () => {
+  //   const input = document.getElementById('divToPrint');
+  //   console.log(input)
+  //   html2canvas(input).then((canvas) => {
+  //     const imgData = canvas.toDataURL('image/png')
+  //     const pdf = new jsPDF();
+  //     pdf.addImage(imgData, 'JPEG', 0, 0)
+  //     pdf.save('cv.pdf')
+  //   })
+  // }
+
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({ content: () => componentRef.current });
+
   return (
     <MainWrapper>
       <CvForm
@@ -134,8 +149,9 @@ const Main = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onPrint={handlePrint}
       />
-      <CvResult cv={cv} />
+      <CvPreview cv={cv} ref={componentRef} />
     </MainWrapper>
   );
 };

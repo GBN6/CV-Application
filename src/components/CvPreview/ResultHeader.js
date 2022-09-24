@@ -18,8 +18,6 @@ const CvResultHeaderWrap = styled.header`
   padding: 2rem;
   background-color: #ffd369;
   color: #222831;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
 `;
 
 export default ResultHeader;

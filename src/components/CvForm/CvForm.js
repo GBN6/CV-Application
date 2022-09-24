@@ -14,6 +14,7 @@ const CvForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onPrint,
 }) => {
   return (
     <CvWrapper>
@@ -30,7 +31,7 @@ const CvForm = ({
         onAdd={onAddEducation}
         onDelete={onDeleteEducation}
       />
-      <Button text='Generate CV in PDF' primary></Button>
+      <Button text='Generate CV in PDF' onClick={onPrint} primary></Button>
     </CvWrapper>
   );
 };

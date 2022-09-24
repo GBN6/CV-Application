@@ -6,7 +6,7 @@ import Subsection from '../Utility/Subsection';
 const ResultSidebar = ({ personalInfo }) => {
   return (
     <SidebarWrap>
-      <Photo src={personalInfo.photo}/>
+      <Photo src={personalInfo.photo} />
       <Section title='Personal Details'>
         <Subsection title='Address'>{personalInfo.address}</Subsection>
         <Subsection title='Phone Number'>{personalInfo.phoneNumber}</Subsection>
@@ -17,10 +17,9 @@ const ResultSidebar = ({ personalInfo }) => {
 };
 
 const SidebarWrap = styled.div`
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: rgb(221, 221, 221);
   color: #393e46;
-  border-bottom-right-radius: 5px;
 `;
 
 const Photo = styled.img`

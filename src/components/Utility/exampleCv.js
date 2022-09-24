@@ -1,4 +1,4 @@
-import examplePhoto from '../../assets/photo.png';
+import examplePhoto from '../../assets/random_photo.jpg'
 import { v4 as uuidv4 } from 'uuid';
 
 const exampleCV = {
@@ -34,53 +34,17 @@ const exampleCV = {
       from: 'From',
       to: 'To',
     },
-    {
-      id: uuidv4(),
-      position: 'Position',
-      company: 'Company',
-      city: 'City',
-      description: 'Description',
-      from: 'From',
-      to: 'To',
-    },
-    {
-      id: uuidv4(),
-      position: 'Position',
-      company: 'Company',
-      city: 'City',
-      description: 'Description',
-      from: 'From',
-      to: 'To',
-    },
-    {
-      id: uuidv4(),
-      position: 'Position',
-      company: 'Company',
-      city: 'City',
-      description: 'Description',
-      from: 'From',
-      to: 'To',
-    },
-    {
-      id: uuidv4(),
-      position: 'Position',
-      company: 'Company',
-      city: 'City',
-      description: 'Description',
-      from: 'From',
-      to: 'To',
-    },
-    {
-      id: uuidv4(),
-      position: 'Position',
-      company: 'Company',
-      city: 'City',
-      description: 'Description',
-      from: 'From',
-      to: 'To',
-    },
   ],
   education: [
+    {
+      id: uuidv4(),
+      universityName: 'University name',
+      city: 'City',
+      degree: '...',
+      specialization: '...',
+      from: 'From',
+      to: 'To',
+    },
     {
       id: uuidv4(),
       universityName: 'University name',

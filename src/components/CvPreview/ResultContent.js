@@ -28,7 +28,6 @@ const ContentWrap = styled.div`
   padding: 2rem;
   background-color: rgb(238, 238, 238);
   color: #222831;
-  border-bottom-left-radius: 5px;
 `;
 
 export default ResultContent;
