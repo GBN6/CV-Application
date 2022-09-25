@@ -1,6 +1,5 @@
 import React from 'react';
 import Section from '../Utility/Section';
-import Input from '../Utility/Input';
 import Button from '../Utility/Button';
 import EducationItem from './EducationItem';
 

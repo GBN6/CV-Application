@@ -1,7 +1,5 @@
 import React from 'react';
 import Section from '../Utility/Section';
-import Input from '../Utility/Input';
-import TextArea from '../Utility/TextArea';
 import Button from '../Utility/Button';
 import ExperienceItem from './ExperienceItem';
 

@@ -2,15 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../Utility/Section';
 import Subsection from '../Utility/Subsection';
+import SkillsItem from './SkillsItem';
 
-const ResultSidebar = ({ personalInfo }) => {
+const ResultSidebar = ({ personalInfo, skills }) => {
+  const skillItem = skills.map((skillItem) => (
+    <SkillsItem key={skillItem.id} skillItem={skillItem} />
+  ));
+
   return (
     <SidebarWrap>
       <Photo src={personalInfo.photo} />
-      <Section title='Personal Details' contrastTitle direction="column">
+      <Section title='Personal Details' contrastTitle direction='column'>
         <Subsection title='Address'>{personalInfo.address}</Subsection>
         <Subsection title='Phone Number'>{personalInfo.phoneNumber}</Subsection>
         <Subsection title='Email'>{personalInfo.email} </Subsection>
+        <Subsection title='Skills'>
+          <List>{skillItem}</List>
+        </Subsection>
       </Section>
     </SidebarWrap>
   );
@@ -25,5 +33,7 @@ const SidebarWrap = styled.div`
 const Photo = styled.img`
   margin-bottom: 2rem;
 `;
-
+const List = styled.ul`
+  padding-left: 2rem;
+`;
 export default ResultSidebar;

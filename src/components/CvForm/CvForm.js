@@ -14,13 +14,21 @@ const CvForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onAddSkills,
+  onDeleteSkills,
   onPrint,
   onLoadExample,
   onReset,
 }) => {
   return (
     <CvWrapper>
-      <Personal personalInfo={cv.personalInfo} onChange={onChangePersonal} />
+      <Personal
+        personalInfo={cv.personalInfo}
+        skills={cv.skills}
+        onChange={onChangePersonal}
+        onAdd={onAddSkills}
+        onDelete={onDeleteSkills}
+      />
       <Experience
         experience={cv.experience}
         onChange={onChangeExperience}
@@ -34,8 +42,8 @@ const CvForm = ({
         onDelete={onDeleteEducation}
       />
       <Button text='Generate CV in PDF' onClick={onPrint} primary></Button>
-      <Button text="Load Example" onClick={onLoadExample} secondary></Button>
-      <Button text="Reset" onClick={onReset} red></Button>
+      <Button text='Load Example' onClick={onLoadExample} secondary></Button>
+      <Button text='Reset' onClick={onReset} red></Button>
     </CvWrapper>
   );
 };

@@ -12,6 +12,12 @@ const emptyCv = {
     email: "",
     description: "",
   },
+  skills: [
+    {
+      id: uuidv4(),
+      skill: '',
+    },
+  ],
   experience: [
     {
       id: uuidv4(),

@@ -18,7 +18,7 @@ class CvPreview extends Component {
           experience={cv.experience}
           education={cv.education}
         />
-        <ResultSidebar personalInfo={cv.personalInfo} />
+        <ResultSidebar skills={cv.skills} personalInfo={cv.personalInfo} />
       </CvPreViewWrap>
     );
   }

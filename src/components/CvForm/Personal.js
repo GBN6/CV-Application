@@ -3,8 +3,20 @@ import Section from '../Utility/Section';
 import Input from '../Utility/Input';
 import TextArea from '../Utility/TextArea';
 import FileInput from '../Utility/FileInput';
+import SkillsItem from './SkillsItem';
+import Button from '../Utility/Button';
 
-const Personal = ({ personalInfo, onChange }) => {
+const Personal = ({ personalInfo, skills, onChange, onAdd, onDelete }) => {
+  const skillItem = skills.map((skillItem) => (
+    <SkillsItem
+      key={skillItem.id}
+      id={skillItem.id}
+      skillsItem={skillItem}
+      onChange={onChange}
+      onDelete={onDelete}
+    />
+  ));
+
   return (
     <Section
       title='Personal Information'
@@ -59,19 +71,14 @@ const Personal = ({ personalInfo, onChange }) => {
         placeholder='Address'
         value={personalInfo.address}
       />
-      {/* <Input
-        onChange={(e) => onChange(e)}
-        type='text'
-        name='skill'
-        placeholder='Skills'
-        value={personalInfo.skills}
-      /> */}
       <TextArea
         onChange={(e) => onChange(e)}
         name='description'
         placeholder='Description'
         value={personalInfo.description}
       />
+      {skillItem}
+      <Button text="Add skill" onClick={onAdd}></Button>
     </Section>
   );
 };
