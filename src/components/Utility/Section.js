@@ -14,7 +14,7 @@ const SectionWrap = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h2`

@@ -16,7 +16,7 @@ const ResultContent = ({ personalInfo, experience, education }) => {
   return (
     <ContentWrap>
       <Section title='Description' contrastTitle>
-        {personalInfo.description}
+        <Description>{personalInfo.description}</Description>
       </Section>
       <Section title='Experience'>{experienceItems}</Section>
       <Section title='Education'>{educationItems}</Section>
@@ -28,6 +28,10 @@ const ContentWrap = styled.div`
   padding: 2rem;
   background-color: rgb(238, 238, 238);
   color: #222831;
+`;
+
+const Description = styled.div`
+  font-style: italic;
 `;
 
 export default ResultContent;

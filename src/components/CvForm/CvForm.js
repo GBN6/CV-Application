@@ -16,6 +16,7 @@ const CvForm = ({
   onDeleteEducation,
   onPrint,
   onLoadExample,
+  onReset,
 }) => {
   return (
     <CvWrapper>
@@ -34,6 +35,7 @@ const CvForm = ({
       />
       <Button text='Generate CV in PDF' onClick={onPrint} primary></Button>
       <Button text="Load Example" onClick={onLoadExample} secondary></Button>
+      <Button text="Reset" onClick={onReset} red></Button>
     </CvWrapper>
   );
 };

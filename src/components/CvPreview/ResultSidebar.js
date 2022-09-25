@@ -24,8 +24,6 @@ const SidebarWrap = styled.div`
 
 const Photo = styled.img`
   margin-bottom: 2rem;
-  max-height: 300px;
-  max-width: 170px;
 `;
 
 export default ResultSidebar;

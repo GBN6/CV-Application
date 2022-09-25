@@ -124,19 +124,12 @@ const Main = () => {
     });
   };
 
-  // const handlePrint = () => {
-  //   const input = document.getElementById('divToPrint');
-  //   console.log(input)
-  //   html2canvas(input).then((canvas) => {
-  //     const imgData = canvas.toDataURL('image/png')
-  //     const pdf = new jsPDF();
-  //     pdf.addImage(imgData, 'JPEG', 0, 0)
-  //     pdf.save('cv.pdf')
-  //   })
-  // }
-
   const handleLoadExample = () => {
     setCv(exampleCV);
+  };
+
+  const handleReset = () => {
+    setCv(emptyCv);
   };
 
   const componentRef = useRef();
@@ -155,6 +148,7 @@ const Main = () => {
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
+        onReset={handleReset}
       />
       <CvPreview cv={cv} ref={componentRef} />
     </MainWrapper>

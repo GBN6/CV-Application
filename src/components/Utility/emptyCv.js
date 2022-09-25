@@ -1,11 +1,12 @@
 import { v4 as uuidv4 } from "uuid";
+import emptyPhoto from '../../assets/photo.png'
 
 const emptyCv = {
   personalInfo: {
     firstName: "",
     lastName: "",
     title: "",
-    photo: "",
+    photo: emptyPhoto,
     address: "",
     phoneNumber: "",
     email: "",
