@@ -18,8 +18,8 @@ const ResultContent = ({ personalInfo, experience, education }) => {
       <Section title='Description' contrastTitle>
         <Description>{personalInfo.description}</Description>
       </Section>
-      <Section title='Experience'>{experienceItems}</Section>
-      <Section title='Education'>{educationItems}</Section>
+      <Section title='Experience' direction="column" contrastTitle>{experienceItems}</Section>
+      <Section title='Education' direction="column" contrastTitle>{educationItems}</Section>
     </ContentWrap>
   );
 };

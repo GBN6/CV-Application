@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Subsection from "../Utility/Subsection";
+import React from 'react';
+import styled from 'styled-components';
+import Subsection from '../Utility/Subsection';
 
 const ExperienceItem = ({ experienceItem }) => {
   return (
@@ -10,9 +10,10 @@ const ExperienceItem = ({ experienceItem }) => {
       </Period>
       <Info>
         <Subsection title={experienceItem.position}>
-          <p>
+          <div>
             {experienceItem.company}, {experienceItem.city}
-          </p>
+          </div>
+          <div>{experienceItem.description}</div>
         </Subsection>
       </Info>
     </ExperienceItemWrap>
@@ -20,17 +21,17 @@ const ExperienceItem = ({ experienceItem }) => {
 };
 
 const ExperienceItemWrap = styled.div`
-display: flex;
-`
+  display: flex;
+`;
 
 const Period = styled.div`
-  width: 20%;
+  width: 25%;
   font-weight: bold;
-  padding: 0.5rem;
+  margin-right: 2rem;
 `;
 
 const Info = styled.div`
-width: 75%;
-`
+  width: 70%;
+`;
 
 export default ExperienceItem;

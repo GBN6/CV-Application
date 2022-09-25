@@ -1,24 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Subsection = (props) => {
+const Subsection = ({ title, children, titlePadding }) => {
   return (
-    <SubsectionWrap>
-      <Title>{props.title}</Title>
-      {props.children}
-    </SubsectionWrap>
+    <SubsectionWrapper padding={titlePadding}>
+      <Title>{title}</Title>
+      {children}
+    </SubsectionWrapper>
   );
 };
 
-const SubsectionWrap = styled.section`
+const SubsectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: flex-start;
+  padding: ${(props) => props.padding};
 `;
 
-const Title = styled.h3`
-  padding: 0.5rem;
+const Title = styled.h4`
+  padding: ${(props) => props.padding};
   line-height: 1.6;
 `;
 
