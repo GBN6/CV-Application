@@ -17,7 +17,7 @@ function Experience({ experience, onChange, onAdd, onDelete }) {
   ));
 
   return (
-    <Section title='Experience'>
+    <Section title='Experience' titlePadding="0.5rem" direction="column">
       {experienceItems}
       <Button text="Add" onClick={onAdd}></Button>
     </Section>

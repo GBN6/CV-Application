@@ -16,7 +16,7 @@ const Education = ({ education, onChange, onAdd, onDelete }) => {
   ));
 
   return (
-    <Section title='Education'>
+    <Section title='Education' titlePadding="0.5rem" direction="column">
       {educationItems}
       <Button text='Add' onClick={onAdd}></Button>
     </Section>

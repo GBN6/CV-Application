@@ -6,7 +6,11 @@ import FileInput from '../Utility/FileInput';
 
 const Personal = ({ personalInfo, onChange }) => {
   return (
-    <Section title='Personal Information'>
+    <Section
+      title='Personal Information'
+      titlePadding='0.5rem'
+      direction='column'
+    >
       <Input
         onChange={(e) => onChange(e)}
         type='text'
