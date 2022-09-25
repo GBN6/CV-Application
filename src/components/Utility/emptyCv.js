@@ -10,6 +10,7 @@ const emptyCv = {
     address: "",
     phoneNumber: "",
     email: "",
+    link: "",
     description: "",
   },
   skills: [

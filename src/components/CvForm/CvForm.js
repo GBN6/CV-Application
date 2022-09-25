@@ -14,6 +14,7 @@ const CvForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onChangeSkills,
   onAddSkills,
   onDeleteSkills,
   onPrint,
@@ -26,6 +27,7 @@ const CvForm = ({
         personalInfo={cv.personalInfo}
         skills={cv.skills}
         onChange={onChangePersonal}
+        onChangeSki={onChangeSkills}
         onAdd={onAddSkills}
         onDelete={onDeleteSkills}
       />

@@ -6,13 +6,13 @@ import FileInput from '../Utility/FileInput';
 import SkillsItem from './SkillsItem';
 import Button from '../Utility/Button';
 
-const Personal = ({ personalInfo, skills, onChange, onAdd, onDelete }) => {
+const Personal = ({ personalInfo, skills, onChange, onChangeSki, onAdd, onDelete }) => {
   const skillItem = skills.map((skillItem) => (
     <SkillsItem
       key={skillItem.id}
       id={skillItem.id}
       skillsItem={skillItem}
-      onChange={onChange}
+      onChange={onChangeSki}
       onDelete={onDelete}
     />
   ));
@@ -60,6 +60,13 @@ const Personal = ({ personalInfo, skills, onChange, onAdd, onDelete }) => {
       <Input
         onChange={(e) => onChange(e)}
         type='text'
+        name='link'
+        placeholder='GitHub / Linkedin'
+        value={personalInfo.link}
+      />
+      <Input
+        onChange={(e) => onChange(e)}
+        type='text'
         name='phoneNumber'
         placeholder='Phone number'
         value={personalInfo.phoneNumber}
@@ -78,7 +85,7 @@ const Personal = ({ personalInfo, skills, onChange, onAdd, onDelete }) => {
         value={personalInfo.description}
       />
       {skillItem}
-      <Button text="Add skill" onClick={onAdd}></Button>
+      <Button text='Add skill' onClick={onAdd}></Button>
     </Section>
   );
 };

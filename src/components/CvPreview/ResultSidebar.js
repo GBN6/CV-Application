@@ -16,6 +16,11 @@ const ResultSidebar = ({ personalInfo, skills }) => {
         <Subsection title='Address'>{personalInfo.address}</Subsection>
         <Subsection title='Phone Number'>{personalInfo.phoneNumber}</Subsection>
         <Subsection title='Email'>{personalInfo.email} </Subsection>
+        {(() => {
+          if (personalInfo.link.length > 0) {
+            return <Subsection title='Link'>{personalInfo.link}</Subsection>;
+          }
+        })()}
         <Subsection title='Skills'>
           <List>{skillItem}</List>
         </Subsection>

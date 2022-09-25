@@ -124,6 +124,43 @@ const Main = () => {
     });
   };
 
+  const handleChangeSkills = (e, id) => {
+    const { name, value } = e.target;
+    setCv((prevState) => {
+      const newSkills = prevState.skills.map((skillsItem) => {
+        if (skillsItem.id === id) {
+          return { ...skillsItem, [name]: value };
+        }
+        return skillsItem;
+      });
+      return { ...prevState, skills: [...newSkills] };
+    });
+
+  }
+
+  const handelAddSkills = (e) => {
+    setCv((prevState) => ({
+      ...prevState,
+      skills: [
+        ...prevState.skills,
+        {
+          id: uuidv4(),
+          skill: '',
+        },
+      ],
+    }));
+  }
+
+  const handleDeleteSkills = (id) => {
+    setCv((prevState) => {
+      const newSkills = prevState.skills.filter(
+        (skillsItem) => skillsItem.id !== id
+      );
+      return { ...prevState, skills: [...newSkills] };
+    });
+
+  }
+
   const handleLoadExample = () => {
     setCv(exampleCV);
   };
@@ -146,6 +183,9 @@ const Main = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onChangeSkills={handleChangeSkills}
+        onAddSkills={handelAddSkills}
+        onDeleteSkills={handleDeleteSkills}
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
         onReset={handleReset}
