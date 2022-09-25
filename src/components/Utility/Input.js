@@ -20,6 +20,7 @@ const InputWrap = styled.input`
   &:focus {
     border: 2px solid #222831;
   }
+  background-color: rgb(238, 238, 238);
 `;
 
 export default Input;

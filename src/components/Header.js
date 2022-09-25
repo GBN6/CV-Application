@@ -25,6 +25,7 @@ const Logo = styled.div`
   margin-right: 1rem;
   font-size: 4rem;
 `;
-const Title = styled.h1``;
+const Title = styled.h1`
+`;
 
 export default Header;

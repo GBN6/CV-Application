@@ -31,6 +31,22 @@ const exampleCV = {
       id: uuidv4(),
       skill: 'CSS',
     },
+    {
+      id: uuidv4(),
+      skill: 'MS Office',
+    },
+    {
+      id: uuidv4(),
+      skill: 'Git',
+    },
+    {
+      id: uuidv4(),
+      skill: 'Linux',
+    },
+    {
+      id: uuidv4(),
+      skill: 'Bootstrap',
+    },
   ],
   experience: [
     {

@@ -39,6 +39,9 @@ const Photo = styled.img`
   margin-bottom: 2rem;
 `;
 const List = styled.ul`
-  padding-left: 2rem;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+
 `;
 export default ResultSidebar;

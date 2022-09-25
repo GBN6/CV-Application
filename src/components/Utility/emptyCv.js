@@ -5,7 +5,7 @@ const emptyCv = {
   personalInfo: {
     firstName: "",
     lastName: "",
-    title: "",
+    titleName: "",
     photo: emptyPhoto,
     address: "",
     phoneNumber: "",

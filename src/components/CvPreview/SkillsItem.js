@@ -15,7 +15,7 @@ const SkillItemWrap = styled.div`
 `;
 
 const Info = styled.li`
-
+max-width: 100%;
 `;
 
 export default SkillsItem;
