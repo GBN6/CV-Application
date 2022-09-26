@@ -27,7 +27,7 @@ const SectionWrapper = styled.section`
   margin-bottom: 2rem;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   padding: ${(props) => props.padding};
   ${(props) =>
     props.contrast &&
